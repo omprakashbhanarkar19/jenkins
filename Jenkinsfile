@@ -12,6 +12,11 @@ pipeline {
                 sh "echo build successfull"
             }
          }
-         
+        stages { 
+        stage ("depoly-stage") {
+            steps {
+                sh "echo deploy successfull"
+            }
+         } 
     }
 }
