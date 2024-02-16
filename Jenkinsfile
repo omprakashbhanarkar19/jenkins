@@ -6,10 +6,5 @@ pipeline {
                 sh "echo pull successfull"
             }
         }
-        stage ("build-stage") {
-            steps {
-                sh "echo build successfull"
-            }
-        }
     }
 }
