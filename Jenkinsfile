@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label "dev"
-    }
+    agent any
     stages { 
         stage ("pull-stage") {
             steps {
