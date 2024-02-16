@@ -12,11 +12,6 @@ pipeline {
                 sh "echo build successfull"
             }
          }
-        stages { 
-        stage ("stage") {
-            steps {
-                sh "echo successfull"
-            }
-        }    
+         
     }
 }
