@@ -55,8 +55,8 @@ JOB_CONFIG_TEMPLATE="<flow-definition>
 
 # Create a Jenkins pipeline job via REST API
 create_pipeline_job() {
-    local job_name="$demo1"
-    local job_config="$sample1"
+    local job_name="$1"
+    local job_config="$2"
 
     curl -X POST \
          -u "${API_TOKEN}:" \
