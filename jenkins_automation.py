@@ -40,7 +40,7 @@ server.create_job("job2", job2_xml)
 # server.disable_job('sample_job')
 
 # Run a build and get build number and more info
-# server.build_job('job3')
+server.build_job('job2')
 # last_build_number = server.get_job_info('job3')['lastCompletedBuild']['number']
 # print("Build Number", last_build_number)
 # build_info = server.get_build_info('job3', last_build_number)
