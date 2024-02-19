@@ -4,7 +4,7 @@ import os
 
 
 
-host = "http://54.87.147.137:8080/"
+host = "http://localhost:8080/"
 username = "Omprakash Bhanarkar" #jenkins username here
 password = "11a2ba3eb5e005c150e782f33b44f1e923" # Jenkins user password / api token here
 server = jenkins.Jenkins(host, username=username, password=password) #automation_user_password

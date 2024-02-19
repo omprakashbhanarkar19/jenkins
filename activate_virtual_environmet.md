@@ -1,5 +1,11 @@
-python3 -m venv venv . venv/bin/activate
+python3 -m venv venv 
 
-save dependecies in requirements.txt pip freeze > requirements.txt
+. venv/bin/activate
 
-to install dependencies next time: pip install -r requirements.txt
+save dependecies in requirements.txt 
+
+pip freeze > requirements.txt
+
+to install dependencies next time: 
+
+pip install -r requirements.txt
