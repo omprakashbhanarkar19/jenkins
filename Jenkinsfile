@@ -7,9 +7,9 @@ pipeline {
             }
         }
         stages { 
-        stage ("build-stage") {
+        stage ("test-stage") {
             steps {
-                sh "echo build successfull"
+                sh "echo test successfull"
             }
          }
         
