@@ -1,34 +1,42 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <flow-definition plugin="workflow-job@2.41">
   <actions/>
-  <description>A sample pipeline job created via API</description>
+  <description>A sample pipeline job created via API with webhook trigger enabled</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <pipelineTriggers>
       <triggers class="vector">
         <jenkins.triggers.SCMTrigger>
-          <spec>* * * * *</spec>
+          <spec></spec>
           <ignorePostCommitHooks>false</ignorePostCommitHooks>
         </jenkins.triggers.SCMTrigger>
+        <org.jenkinsci.plugins.gitea.GiteaPushTrigger plugin="gitea@1.2.0">
+          <spec></spec>
+          <triggerOnEvents>
+            <org.jenkinsci.plugins.gitea.push.PushEvent/>
+          </triggerOnEvents>
+        </org.jenkinsci.plugins.gitea.GiteaPushTrigger>
       </triggers>
     </pipelineTriggers>
   </properties>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.89">
-    <scm class="jenkins.plugins.git.GitSCM" plugin="git@4.12.0">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.12.0">
       <configVersion>2</configVersion>
       <userRemoteConfigs>
-        <jenkins.plugins.git.UserRemoteConfig>
+        <hudson.plugins.git.UserRemoteConfig>
           <url>https://github.com/omprakashbhanarkar19/jenkins.git</url>
           <credentialsId>your-credentials-id</credentialsId>
-        </jenkins.plugins.git.UserRemoteConfig>
+        </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
       <branches class="list">
-        <jenkins.plugins.git.BranchSpec>
+        <hudson.plugins.git.BranchSpec>
           <name>*/main</name>
-        </jenkins.plugins.git.BranchSpec>
+        </hudson.plugins.git.BranchSpec>
       </branches>
       <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-      <extensions/>
+      <extensions>
+        <hudson.plugins.git.extensions.impl.CleanBeforeCheckout/>
+      </extensions>
     </scm>
     <scriptPath>Jenkinsfile</scriptPath>
   </definition>
