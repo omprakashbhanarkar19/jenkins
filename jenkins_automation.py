@@ -19,8 +19,8 @@ print('Hello %s from Jenkins %s' % (user['fullName'], version))
 # #create a blank job
 # server.create_job("job1", jenkins.EMPTY_CONFIG_XML)
 # #create pre-configured-job
-#job2_xml = open("job2.xml", mode='r', encoding='utf-8').read()
-#server.create_job("job2", job2_xml)
+job2_xml = open("job2.xml", mode='r', encoding='utf-8').read()
+server.create_job("job2", job2_xml)
 
 # job3_xml = open("job3.xml", mode='r', encoding='utf-8').read()
 # server.create_job("job3", job3_xml)
@@ -40,7 +40,7 @@ print('Hello %s from Jenkins %s' % (user['fullName'], version))
 # server.disable_job('sample_job')
 
 # Run a build and get build number and more info
-server.build_job('job2')
+#server.build_job('job2')
 # last_build_number = server.get_job_info('job3')['lastCompletedBuild']['number']
 # print("Build Number", last_build_number)
 # build_info = server.get_build_info('job3', last_build_number)

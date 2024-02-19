@@ -6,26 +6,26 @@
   <properties>
     <pipelineTriggers>
       <triggers class="vector">
-        <hudson.triggers.SCMTrigger>
+        <jenkins.triggers.SCMTrigger>
           <spec>* * * * *</spec>
           <ignorePostCommitHooks>false</ignorePostCommitHooks>
-        </hudson.triggers.SCMTrigger>
+        </jenkins.triggers.SCMTrigger>
       </triggers>
     </pipelineTriggers>
   </properties>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.89">
-    <scm class="hudson.plugins.git.GitSCM" plugin="git@4.12.0">
+    <scm class="jenkins.plugins.git.GitSCM" plugin="git@4.12.0">
       <configVersion>2</configVersion>
       <userRemoteConfigs>
-        <hudson.plugins.git.UserRemoteConfig>
+        <jenkins.plugins.git.UserRemoteConfig>
           <url>https://github.com/omprakashbhanarkar19/jenkins.git</url>
           <credentialsId>your-credentials-id</credentialsId>
-        </hudson.plugins.git.UserRemoteConfig>
+        </jenkins.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
       <branches class="list">
-        <hudson.plugins.git.BranchSpec>
+        <jenkins.plugins.git.BranchSpec>
           <name>*/main</name>
-        </hudson.plugins.git.BranchSpec>
+        </jenkins.plugins.git.BranchSpec>
       </branches>
       <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
       <extensions/>
