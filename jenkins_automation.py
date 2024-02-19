@@ -17,9 +17,9 @@ print('Hello %s from Jenkins %s' % (user['fullName'], version))
 
 # #Create deployment jobs
 # #create a blank job
-server.create_job("job1", jenkins.EMPTY_CONFIG_XML)
+# server.create_job("job1", jenkins.EMPTY_CONFIG_XML)
 # #create pre-configured-job
-# job2_xml = open("job2.xml", mode='r', encoding='utf-8').read()
+job2_xml = open("job2.xml", mode='r', encoding='utf-8').read()
 # server.create_job("job2", job2_xml)
 
 # job3_xml = open("job3.xml", mode='r', encoding='utf-8').read()

@@ -13,6 +13,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>echo &quot;This is job 2&quot;</command>
+      <scriptPath>Jenkinsfile</scriptPath>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
