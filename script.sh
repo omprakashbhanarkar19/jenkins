@@ -2,7 +2,7 @@
 
 # Jenkins URL and API token (replace with your Jenkins URL and API token)
 JENKINS_URL="http://54.87.147.137:8080/"
-API_TOKEN="11b6ffb2c0ab8a7b9cec763bd824a4e919"
+API_TOKEN="11d09eb46c6655cc4a9075393dfc6fe43e"
 
 # GitHub repository information
 REPO_URL="https://github.com/omprakashbhanarkar19/jenkins.git"
